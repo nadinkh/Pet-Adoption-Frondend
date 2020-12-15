@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@1,300&display=swap');
+
+
+.home {
+    font-family: 'Ubuntu', sans-serif;
+    padding: 2rem;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow:
+  0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+  0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+  0 12.5px 10px rgba(0, 0, 0, 0.06),
+  0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+  0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+  0 100px 80px rgba(0, 0, 0, 0.12)
+;
+
+}
+h1{
+    color:coral;
+    font-size:30px;
+}
+h2{
+    font-size: 50px;
+}
+
+.sign-up,.login,.join,.login-btn{
+    color: #fff !important;
+    text-transform: uppercase;
+    text-decoration: none;
+    background: #ed3330;
+    padding: 20px;
+    border-radius: 5px;
+    display: inline-block;
+    border: none;
+    transition: all 0.4s ease 0s;
+    border-radius:10rem ;
+}
+.sign-up:hover,.login:hover,
+.search:hover,.join:hover,
+.login-btn:hover{
+    background: #434343;
+letter-spacing: 1px;
+-webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+-moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+box-shadow: 5px 40px -10px rgba(0,0,0,0.57);
+transition: all 0.4s ease 0s;
+cursor: pointer;
+}
+
+  .dog-pic1,.bulldog,.puppy{
+    max-height: 150px;
+    max-width: 200px;
+    width: 170px;
+    height: 150px; 
+    border-radius: 10rem;
+    box-shadow:
+    0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+    0 12.5px 10px rgba(0, 0, 0, 0.06),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+    0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+    0 100px 80px rgba(0, 0, 0, 0.12)
+  ;
+  }
+  .home-page-images{
+      display: flex;
+      justify-content: space-around;
+  }
+  .home-page-images{
+      margin-top: 2rem;
+      border-bottom:2px solid black;
+padding-bottom:4rem ;
+  }
+  h3{
+      font-size: 45px;
+      padding-top: 2rem;
+  }
+
+
+  /* signup modal */
+.sign-up-container{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+}
+.sign-up-email,.sign-up-password,
+.sign-up-password-confirm,
+.first-name,.last-name,.phone-number{
+    display: flex;
+    height: 4rem;
+    width:30rem;
+    border-radius: 4px;
+    margin:1rem
+}
+.enter-phone{
+    font-size: 15px;
+    font-weight: bold;
+    
+}
+
+/* login */
+.login-container{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+}
+.login-email,.login-password{
+    display: flex;
+    height: 4rem;
+    width:30rem;
+    border-radius: 4px;
+    margin:1rem
+}
+/* ::placeholder{
+    margin-left:1rem
+} */
