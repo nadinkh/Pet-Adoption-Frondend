@@ -3,10 +3,10 @@ import React from 'react'
 import dog1 from './dog1.png'
 import bulldog from './bulldog.png'
 import puppy from './puppy.png'
-import { FcHome } from 'react-icons/fc';
 import LogIn from './LogIn'
 import Modal from 'react-modal';
 import SignUp from './SignUp'
+
 
 Modal.setAppElement('#root')
 const Home = () => {
@@ -24,12 +24,12 @@ const Home = () => {
     return (
         <>
             <div className="home">
-                <h1><FcHome /></h1>
-                <h2>Our Dogs Need Your Help</h2>
+                {/* <h1><FcHome /></h1> */}
                 <div className="middle-navbar">
                     <button className="login" onClick={toggleModal2}>Log In</button>
                     <button className="sign-up" onClick={toggleModal}>Sign Up</button>
                 </div>
+                <h2>Our Dogs Need Your Help</h2>
                 <div className="home-page-images">
                     <img className="bulldog" src={bulldog} alt="doggie" />
                     <img className="dog-pic1" src={dog1} alt="doggie" />

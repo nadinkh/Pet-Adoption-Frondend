@@ -1,6 +1,5 @@
 import './NavBar.css'
 import React from 'react'
-import { FcHome } from 'react-icons/fc';
 import {
     FiSearch
 } from 'react-icons/fi';
@@ -9,16 +8,25 @@ const NavBar = () => {
     return (
         <div>
             <div className="upper-navbar">
-                <Link to="/search">
-                    <button className="search">Search<FiSearch /></button>
-                </Link>
-                <Link>
-                    <button className="my-pets">My Pets</button>
-                </Link>
-                <Link>
-                    <button className="settings">Settings</button>
-                </Link>
-
+                <div className="left-up-navbar">
+                    <Link >
+                        <button className="home-btn">Home</button>
+                    </Link>
+                    <Link to="/search">
+                        <button className="search">Search<FiSearch /></button>
+                    </Link>
+                    <Link>
+                        <button className="my-pets">My Pets</button>
+                    </Link>
+                </div>
+                <div className="right-up-navbar">
+                    <Link>
+                        <button className="settings">Settings</button>
+                    </Link>
+                    <Link >
+                        <button className="logout">logout</button>
+                    </Link>
+                </div>
             </div>
         </div>
 
