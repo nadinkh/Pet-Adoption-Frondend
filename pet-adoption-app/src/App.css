@@ -9,7 +9,7 @@ html {
 }
 
 body {
-    font-family:'Courier New', Courier, monospace;
+    font-family: 'Ubuntu', sans-serif;
     background: coral;
     padding: 3rem;
     min-height: 100vh;

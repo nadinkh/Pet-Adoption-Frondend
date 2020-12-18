@@ -1,7 +1,6 @@
 .settings,.my-pets,.search ,
 .logout,.home-btn{
     color: #fff !important;
-    text-transform: uppercase;
     text-decoration: none;
     background: #ed3330;
     padding: 15px;
@@ -25,5 +24,15 @@ cursor: pointer;
 .upper-navbar{
     display: flex;
     justify-content:space-between;
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 2rem;
+   
+}
+.middle-navbar{
+    display: flex;
+    float:right;
+    justify-content: center;
+    align-items: center;
    
 }
