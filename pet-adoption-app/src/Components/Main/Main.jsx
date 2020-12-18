@@ -2,8 +2,9 @@ import React from 'react'
 import Home from '../Home/Home'
 import Navbar from '../NavBar/NavBar'
 import Search from '../Search/Search'
+import ProfileSettings from '../ProfileSettings/ProfileSettings'
 import DogsCards from '../Search/DogsCards'
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 const Main = () => {
     return (
         <Router>
@@ -18,6 +19,9 @@ const Main = () => {
                     <Route exact path="/search">
                         <Search />
                         <DogsCards />
+                    </Route>
+                    <Route exact path="/profilesettings">
+                        <ProfileSettings />
                     </Route>
                 </Switch>
             </div>

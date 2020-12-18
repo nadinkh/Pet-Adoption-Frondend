@@ -1,0 +1,109 @@
+.settings-container{
+    font-family: 'Ubuntu', sans-serif;
+    padding: 1rem;
+    margin: 1rem;
+    background-color: #fff;
+    border-radius: 10px;
+    margin-top: 1.5rem;
+    box-shadow:
+  0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+  0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+  0 12.5px 10px rgba(0, 0, 0, 0.06),
+  0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+  0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+  0 100px 80px rgba(0, 0, 0, 0.12)
+;
+}
+
+.top-container{
+    font-family: 'Ubuntu', sans-serif;
+    padding: 1rem;
+    margin: 1rem;
+    background-color: #fff;
+    border-radius: 10px;
+    margin-top: 1.5rem;
+    box-shadow:
+  0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+  0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+  0 12.5px 10px rgba(0, 0, 0, 0.06),
+  0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+  0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+  0 100px 80px rgba(0, 0, 0, 0.12)
+;
+}
+h4{
+    font-size: 20px;
+    margin-left: 5rem;
+}
+.middle-container{
+    display: flex;
+    padding: 1rem;
+    margin: 1rem;
+    background-color: #fff;
+    border-radius: 10px;
+    margin-top: 1.5rem;
+    box-shadow:
+  0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+  0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+  0 12.5px 10px rgba(0, 0, 0, 0.06),
+  0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+  0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+  0 ;
+  justify-content: center;
+}
+.first-last-name-profile-container{
+    display: flex;
+}
+.first-name-profile-container,.last-name-profile-container{
+    display: flex;
+       flex-flow: column;
+       justify-content: center;
+       text-align: center;
+       margin-bottom:1rem ;
+}
+.first-name-profile,.last-name-profile{
+    height: 3rem;
+    width:13rem;
+    border-radius: 4px;
+    margin :1rem;
+    ;
+}
+.user-bio,.email-profile,.password-profile,.phone-number-profile{
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    height: 3rem;
+    width:27rem;
+    border-radius: 4px;
+    margin :1rem;
+   
+}
+.user-bio{
+    height: 7rem;
+    width:27rem;
+}
+.profile-label{
+    margin-left: 1.5rem;
+}
+.save-changes-btn{
+    color: #fff !important;
+    text-decoration: none;
+    background: #ed3330;
+    padding: 7px;
+    border-radius: 5px;
+    display: inline-block;
+    border: none;
+    transition: all 0.4s ease 0s;
+    border-radius:5rem ;
+    margin:1rem
+}
+.save-changes-btn:hover{
+    background: #434343;
+    letter-spacing: 1px;
+    -webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+    -moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+    box-shadow: 5px 40px -10px rgba(0,0,0,0.57);
+    transition: all 0.4s ease 0s;
+    cursor: pointer;
+}

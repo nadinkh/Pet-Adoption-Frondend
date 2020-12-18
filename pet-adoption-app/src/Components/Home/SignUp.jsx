@@ -31,7 +31,7 @@ const SignUp = ({ toggleModal, modalIsOpen }) => {
                 <form className="sign-up-container">
                     <div className="first-last-name-container">
                         <div className="first-name-container">
-                            <label for="fname">First Name:</label><br></br>
+                            <label for="fname">First Name:</label>
                             <input className="first-name" type="text" placeholder="First Name" required />
                         </div>
                         <div className="last-name-container">
