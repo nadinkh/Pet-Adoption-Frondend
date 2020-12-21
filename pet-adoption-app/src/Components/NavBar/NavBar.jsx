@@ -17,22 +17,23 @@ const NavBar = () => {
                     <Link to="/search">
                         <button className="search">Search<FiSearch /></button>
                     </Link>
-                    <Link>
+
+                    <Link to="/mypetspage">
                         <button className="my-pets">My Pets</button>
                     </Link>
                 </div>
 
                 <Link to="/">
-
                     <img className="logo" src={Logo} alt="doggie" />
                 </Link>
 
                 <div className="right-up-navbar">
+
                     <Link to="/profilesettings">
                         <button className="settings">Settings</button>
                     </Link>
                     <Link >
-                        <button className="logout">logout</button>
+                        <button className="logout">Logout</button>
                     </Link>
                 </div>
             </div>

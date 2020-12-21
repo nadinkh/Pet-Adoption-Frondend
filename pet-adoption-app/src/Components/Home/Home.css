@@ -127,7 +127,10 @@ margin-top: 2rem;
 }
 :placeholder-shown{
    padding: 0 2%;
-   color: pink;
+   
+}
+input.placeholder{
+    text-align: center;
 }
     label{
        font-size: 15px;

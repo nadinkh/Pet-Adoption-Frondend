@@ -1,14 +1,11 @@
-.cards-container{
-    display: flex;
-    flex-wrap: wrap;
-}
-.card-one,.card-two,.card-three{
+
+.add-pet-container{
     font-family: 'Ubuntu', sans-serif;
-    padding: 2rem;
+    padding: 1rem;
+    margin: 1rem;
     background-color: #fff;
     border-radius: 10px;
-    margin: 1.5rem;
-    /* max-width: 350px; */
+    margin-top: 1.5rem;
     box-shadow:
   0 2.8px 2.2px rgba(0, 0, 0, 0.034),
   0 6.7px 5.3px rgba(0, 0, 0, 0.048),
@@ -17,17 +14,16 @@
   0 41.8px 33.4px rgba(0, 0, 0, 0.086),
   0 100px 80px rgba(0, 0, 0, 0.12)
 ;
-display: flex;
-    flex-flow: column;
-    justify-content: space-between;
-  transition: 0.3s;
-  width: 30%;
+width: 60%;
+
 }
-.detail-container{
-    padding: 2rem;
-    background-color: coral;
+header{
+    font-family: 'Ubuntu', sans-serif;
+    padding: 1rem;
+    margin: 1rem;
+    background-color: #fff;
     border-radius: 10px;
-    margin: 1.5rem;
+    margin-top: 1.5rem;
     box-shadow:
   0 2.8px 2.2px rgba(0, 0, 0, 0.034),
   0 6.7px 5.3px rgba(0, 0, 0, 0.048),
@@ -35,10 +31,28 @@ display: flex;
   0 22.3px 17.9px rgba(0, 0, 0, 0.072),
   0 41.8px 33.4px rgba(0, 0, 0, 0.086),
   0 100px 80px rgba(0, 0, 0, 0.12)
+;
 }
-.readmore-btn{
+.add-pet-form{
+    margin:4rem
+}
+.add-pet-form{
+    display: flex;
+}
+.dog-type-input,.dog-name-input,.dog-status-input,.dog-weight-input,.dog-height-input,
+.dog-dietary-input,.dog-bio-input,.dog-color-input,.hypo{
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    height: 3rem;
+    width:20rem;
+    border-radius: 4px;
+    margin :1rem;
+    border:1px solid black
+}
+.add-pet-btn,.submit-photo-btn{
     color: #fff !important;
-    text-transform: uppercase;
     text-decoration: none;
     background: #ed3330;
     padding: 7px;
@@ -49,7 +63,7 @@ display: flex;
     border-radius:5rem ;
     margin:1rem
 }
-.readmore-btn:hover{
+.add-pet-btn:hover,.submit-photo-btn:hover{
     background: #434343;
     letter-spacing: 1px;
     -webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
@@ -57,25 +71,4 @@ display: flex;
     box-shadow: 5px 40px -10px rgba(0,0,0,0.57);
     transition: all 0.4s ease 0s;
     cursor: pointer;
-}
-.dog-name,.dog-type,.dog-status,.dog-height,.dog-weight{
-    display: flex;
-    flex-flow: column;
-    padding: 0.5rem;
-   font-size: 20px;
-}
-.first-dog,.second-dog,.third-dog{
-  display: flex;
-  flex-wrap: wrap;
-    max-height: 300px;
-    max-width: 300px;
-    width: 300px;
-    height: 300px;
-    border-radius: 2rem;
-    
-    margin-left: auto;
-    margin-right: auto;
-    
-    /* height: auto; */
-   
 }

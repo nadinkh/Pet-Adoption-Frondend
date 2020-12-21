@@ -6,6 +6,7 @@ import {
 import alvan from './Images/alvan.jpg'
 import edeson from './Images/edeson.jpg'
 import james from './Images/james.jpg';
+import { Link } from "react-router-dom";
 const DogsCards = () => {
     return (
 
@@ -19,8 +20,11 @@ const DogsCards = () => {
                     <div className="dog-height">Height:</div>
                     <div className="dog-weight">weight:</div>
                 </div>
-                <button className="readmore-btn">Read More
+                <Link to="/readmore">
+
+                    <button className="readmore-btn">Read More
                 <BiMessageRoundedDetail /></button>
+                </Link>
             </div>
             <div className="card-two">
                 <img className="second-dog" src={edeson} alt="doggie" />
