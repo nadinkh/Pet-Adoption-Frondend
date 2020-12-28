@@ -8,13 +8,7 @@ import { Link } from "react-router-dom";
 import { useHistory } from 'react-router-dom'
 
 
-const NavBar = () => {
-    const history = useHistory()
-    const logout = () => {
-        localStorage.removeItem('token')
-        history.push('/')
-        const reload = window.location.reload()
-    }
+const NavLogout = () => {
 
     return (
         <div>
@@ -27,24 +21,11 @@ const NavBar = () => {
                     <Link to="/search">
                         <button className="search">Search<FiSearch /></button>
                     </Link>
-
-                    <Link to="/mypetspage">
-                        <button className="my-pets">My Pets</button>
-                    </Link>
                 </div>
-
                 <Link to="/">
                     <img className="logo" src={Logo} alt="doggie" />
                 </Link>
-
                 <div className="right-up-navbar">
-
-                    <Link to="/profilesettings">
-                        <button className="settings">Settings</button>
-                    </Link>
-                    <Link to="/">
-                        <button onClick={logout} className="logout">Logout</button>
-                    </Link>
                 </div>
             </div>
         </div>
@@ -53,4 +34,4 @@ const NavBar = () => {
     )
 }
 
-export default NavBar
+export default NavLogout;
