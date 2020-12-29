@@ -3,28 +3,45 @@ import React, { useEffect, useState } from 'react'
 import axios from '../Home/axios.js'
 
 const HomeLogin = () => {
-    let user = {
-        name: 'Nadine',
-        last: 'Khamis'
+    // let user = {
+    //     name: '',
+    //     last: ''
+    // }
+
+    const [infoUser, setInfoUser] = useState("")
+    const userInfo = async () => {
+        const response = await axios.get("/userinfo", {
+            headers: {
+                'auth-token': localStorage.getItem('token'),
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            }
+        })
+        setInfoUser(response.data)
     }
     useEffect(() => {
-        const userInfo = async () => {
-            const response = await axios.get("/userinfo", {
-                headers: {
-                    'auth-token': localStorage.getItem('token'),
-                    'Accept': 'application/json',
-                    'Content-Type': 'application/json'
-                }
-            })
-            // const data = await response.json()
-            console.log(response)
-        }
+
+
+        // const nameAndLastName = await axios.get(`/userinfo/username/${response.data._id}`, {
+        //     headers: {
+        //         'auth-token': localStorage.getItem('token'),
+        //         'Accept': 'application/json',
+        //         'Content-Type': 'application/json'
+        //     }
+        // })
+        // setInfoUser(nameAndLastName)
+
+
+
         userInfo()
-    })
+
+    }, [])
 
     return (
         <div>
-            <header>{`Welcome ${user.name} ${user.last} to our site!`}</header>
+            {infoUser && <header>{` ${infoUser.name} ${infoUser.lastName}, Welcome To Our Site!`}</header>}
+
+            {/* {console.log(infoUser)} */}
         </div>
     )
 }

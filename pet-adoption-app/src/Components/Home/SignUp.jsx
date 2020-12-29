@@ -61,7 +61,7 @@ const SignUp = ({ toggleModal, modalIsOpen }) => {
             password: password
         })
         if (logIn.status === 200) {
-            localStorage.setItem('token', response.data);
+            localStorage.setItem('token', response.data.token);
         }
         console.log(logIn)
         history.push('/HomeLogin')
