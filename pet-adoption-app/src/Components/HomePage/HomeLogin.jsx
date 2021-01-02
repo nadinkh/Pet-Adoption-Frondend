@@ -1,4 +1,3 @@
-
 import React, { useEffect, useState } from 'react'
 import axios from '../Home/axios.js'
 
@@ -9,6 +8,7 @@ const HomeLogin = () => {
     // }
 
     const [infoUser, setInfoUser] = useState("")
+
     const userInfo = async () => {
         const response = await axios.get("/userinfo", {
             headers: {
@@ -21,7 +21,7 @@ const HomeLogin = () => {
     }
     useEffect(() => {
 
-
+        console.log('TEST')
         // const nameAndLastName = await axios.get(`/userinfo/username/${response.data._id}`, {
         //     headers: {
         //         'auth-token': localStorage.getItem('token'),

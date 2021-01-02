@@ -37,10 +37,10 @@ const LogIn = ({ toggleModal2, modalIsOpen2 }) => {
             password: password
         })
         if (response.status === 200) {
-            localStorage.setItem('token', response.data);
+            localStorage.setItem('token', response.data.token);
         }
         history.push('/HomeLogin')
-        const reload = window.location.reload()
+        // const reload = window.location.reload()
     }
     return (
         <div>

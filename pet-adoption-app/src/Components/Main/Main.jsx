@@ -28,16 +28,19 @@ const Main = () => {
                         <NavLogout />
                     </div>
                     <Switch>
+                        <Route exact path="/homelogin">
+                            <HomeLogin />
+                        </Route>
                         <Route exact path="/admin">
                             <Admin />
                         </Route>
                         <Route exact path="/">
                             <Home />
                         </Route>
-                        {/* <Route exact path="/mypetspage">
+                        <Route exact path="/mypetspage">
                             <MyPetsPage />
                             <SavedOwnedDogs />
-                        </Route> */}
+                        </Route>
                         <Route exact path="/advancedsearch">
                             <AdvancedSearch />
                         </Route>
@@ -49,9 +52,9 @@ const Main = () => {
                         <Route exact path="/readmore">
                             <ReadMore />
                         </Route>
-                        {/* <Route exact path="/profilesettings">
+                        <Route exact path="/profilesettings">
                             <ProfileSettings />
-                        </Route> */}
+                        </Route>
                     </Switch>
                 </div>
             </Router>

@@ -65,7 +65,7 @@ const SignUp = ({ toggleModal, modalIsOpen }) => {
         }
         console.log(logIn)
         history.push('/HomeLogin')
-        // const reload = window.location.reload()
+        const reload = window.location.reload()
     }
 
 
