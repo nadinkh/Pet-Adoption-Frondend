@@ -40,7 +40,7 @@ const LogIn = ({ toggleModal2, modalIsOpen2 }) => {
             localStorage.setItem('token', response.data.token);
         }
         history.push('/HomeLogin')
-        // const reload = window.location.reload()
+        const reload = window.location.reload()
     }
     return (
         <div>

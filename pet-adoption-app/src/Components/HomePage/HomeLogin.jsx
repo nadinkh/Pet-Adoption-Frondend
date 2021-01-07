@@ -2,10 +2,6 @@ import React, { useEffect, useState } from 'react'
 import axios from '../Home/axios.js'
 
 const HomeLogin = () => {
-    // let user = {
-    //     name: '',
-    //     last: ''
-    // }
 
     const [infoUser, setInfoUser] = useState("")
 
