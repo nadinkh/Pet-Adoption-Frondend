@@ -3,6 +3,8 @@ import axios from '../Home/axios'
 import { useHistory } from 'react-router-dom'
 import '../Search/DogsCards.css'
 import './Admin.css'
+import Cloudinary from './Cloudinary';
+
 
 const Admin = () => {
 
@@ -15,7 +17,7 @@ const Admin = () => {
     const [hypoallergenic, setHypoallergenic] = useState('');
     const [dietary, setDietary] = useState('');
     const [bio, setBio] = useState('');
-    // const [photoURL, setPhotoURL] = useState('');
+    const [photoURL, setPhotoURL] = useState('');
     const history = useHistory();
 
     const handleType = event => {
@@ -58,16 +60,20 @@ const Admin = () => {
     //     setPhotoURL(event.target.value)
     //     console.log('test9')
     // }
-    const [imageSelected, setImageSelected] = useState('')
-    const uploadImage = () => {
-        // console.log(files[0])
-        const formData = new FormData();
-        formData.append("file", imageSelected)
-        formData.append("upload_preset", "nvcpuwex")
-        axios.post("https://api.cloudinary.com/v1_1/drr6lmpsv/image/upload", formData)
-            .then((response) => {
-                console.log(response)
-            })
+    // const [imageSelected, setImageSelected] = useState('')
+    // const uploadImage = () => {
+    //     // console.log(files[0])
+    //     const formData = new FormData();
+    //     formData.append("file", imageSelected)
+    //     formData.append("upload_preset", "nvcpuwex")
+    //     axios.post("https://api.cloudinary.com/v1_1/drr6lmpsv/image/upload", formData)
+    //         .then((response) => {
+    //             console.log(response)
+    //         })
+    // }
+    const uploadImg = (img) => {
+        let photoURL = img.info.url;
+        setPhotoURL(photoURL);
     }
 
     const addPet = async (event) => {
@@ -82,7 +88,7 @@ const Admin = () => {
             hypoallergenic: hypoallergenic,
             dietary: dietary,
             bio: bio,
-            // photoUrl: photoURL
+            photoUrl: photoURL
         })
         history.push('/admin')
         // const reload = window.location.reload()
@@ -94,10 +100,14 @@ const Admin = () => {
             <div className="add-pet-container">
                 <form className="add-pet-form">
                     <div className="dog-type-container">
-                        <form className="add-photo-form">
-                            <input type="file" onChange={(event) => { setImageSelected(event.target.files[0]) }} />
+                        <div className="cloudinary-container">
+                            <p className="add-photo-text">add Photo</p>
+                            <Cloudinary uploadImg={uploadImg} />
+                        </div>
+                        {/* <form className="add-photo-form">
+                            <input type="file" />
                         </form>
-                        <button className="submit-photo-btn" onClick={uploadImage}>Submit</button>
+                        <button className="submit-photo-btn" >Submit</button> */}
                         <label for="type">Type:</label>
                         <input className="dog-type-input" type="text"
                             onChange={event => handleType(event)} required />

@@ -31,9 +31,9 @@ const Main = () => {
                         <Route exact path="/homelogin">
                             <HomeLogin />
                         </Route>
-                        <Route exact path="/admin">
+                        {/* <Route exact path="/admin">
                             <Admin />
-                        </Route>
+                        </Route> */}
                         <Route exact path="/">
                             <Home />
                         </Route>
@@ -73,6 +73,7 @@ const Main = () => {
                             <HomeLogin />
                         </Route>
                         <Route exact path="/admin">
+
                             <Admin />
                         </Route>
                         <Route exact path="/">

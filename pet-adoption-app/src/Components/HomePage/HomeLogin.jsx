@@ -18,16 +18,6 @@ const HomeLogin = () => {
     useEffect(() => {
 
         console.log('TEST')
-        // const nameAndLastName = await axios.get(`/userinfo/username/${response.data._id}`, {
-        //     headers: {
-        //         'auth-token': localStorage.getItem('token'),
-        //         'Accept': 'application/json',
-        //         'Content-Type': 'application/json'
-        //     }
-        // })
-        // setInfoUser(nameAndLastName)
-
-
 
         userInfo()
 

@@ -75,3 +75,12 @@ justify-content: center;
     transition: all 0.4s ease 0s;
     cursor: pointer;
 }
+.add-photo-text{
+   font-size:medium;
+   margin-bottom: 1rem;
+   font-weight: bold;
+}
+.cloudinary-container{
+    margin-bottom: 2rem;
+    margin-left:0.8rem;
+}

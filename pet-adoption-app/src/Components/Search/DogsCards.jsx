@@ -7,12 +7,16 @@ import alvan from './Images/alvan.jpg'
 import edeson from './Images/edeson.jpg'
 import james from './Images/james.jpg';
 import { Link } from "react-router-dom";
+import Admin from '../Admin/Admin'
+import { Image } from 'cloudinary-react'
 const DogsCards = () => {
+
     return (
 
         <div className="cards-container">
             <div className="card-one">
-                <img className="first-dog" src={alvan} alt="doggie" />
+                <Image
+                    style={{ width: 200 }} cloudName="drr6lmpsv" publicId="https://res.cloudinary.com/drr6lmpsv/image/upload/v1610116898/pets/xy5btt80jgxfmpe00ykt.png" />
                 <div className="detail-container">
                     <div className="dog-name">Name :</div>
                     <div className="dog-type">Type:</div>
