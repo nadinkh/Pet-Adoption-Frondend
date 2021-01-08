@@ -16,10 +16,7 @@ const Admin = () => {
     const [dietary, setDietary] = useState('');
     const [bio, setBio] = useState('');
     // const [photoURL, setPhotoURL] = useState('');
-    // const [selectedPhoto, setSelectedPhoto] = useState('');
-    // const [PreviewSource, setPreviewSource] = useState('')
     const history = useHistory();
-
 
     const handleType = event => {
         setType(event.target.value)
@@ -57,36 +54,21 @@ const Admin = () => {
         setBio(event.target.value)
         console.log('test8')
     }
-    // const handlePhotoURL = e => {
-    //     // setPhotoURL(event.target.value)
-    //     // console.log('test9')
-    //     const photo = e.target.photos[0];
-    //     previewFile(photo)
+    // const handlePhotoURL = event => {
+    //     setPhotoURL(event.target.value)
+    //     console.log('test9')
     // }
-    const [fileInputState, setFileInputState] = useState('')
-    const [selectedFile, setSelectedFile] = useState('')
-    const [PreviewSource, setPreviewSource] = useState('')
-    const handleFileInputChange = (e) => {
-        const file = e.target.files[0]
-        previewFile(file)
+    const [imageSelected, setImageSelected] = useState('')
+    const uploadImage = () => {
+        // console.log(files[0])
+        const formData = new FormData();
+        formData.append("file", imageSelected)
+        formData.append("upload_preset", "nvcpuwex")
+        axios.post("https://api.cloudinary.com/v1_1/drr6lmpsv/image/upload", formData)
+            .then((response) => {
+                console.log(response)
+            })
     }
-    const previewFile = (file) => {
-        const reader = new FileReader()
-        reader.readAsDataURL(file);
-        reader.onloadend = () => {
-            setPreviewSource(reader.result)
-        }
-    }
-    const handleSubmitFile = (e) => {
-        console.log('submitting')
-        e.preventDefault();
-        if (!PreviewSource) return;
-        uploadImage(PreviewSource)
-    };
-    const uploadImage = (base64EncodedImage) => {
-        console.log(base64EncodedImage)
-
-    };
 
     const addPet = async (event) => {
         event.preventDefault()
@@ -112,12 +94,10 @@ const Admin = () => {
             <div className="add-pet-container">
                 <form className="add-pet-form">
                     <div className="dog-type-container">
-                        <form className="add-photo-form" onSubmit={handleSubmitFile} >
-                            <input type="file" name="image" value={fileInputState} onChange={handleFileInputChange} />
-                            <button className="submit-photo-btn" type="submit">Submit</button>
+                        <form className="add-photo-form">
+                            <input type="file" onChange={(event) => { setImageSelected(event.target.files[0]) }} />
                         </form>
-                        {PreviewSource && (<img src=
-                            {PreviewSource} alt="Chosen" style={{ height: '150px' }} />)}
+                        <button className="submit-photo-btn" onClick={uploadImage}>Submit</button>
                         <label for="type">Type:</label>
                         <input className="dog-type-input" type="text"
                             onChange={event => handleType(event)} required />
@@ -131,7 +111,7 @@ const Admin = () => {
                         <select class="dog-status-input" name="status"
                             onChange={event => handleAdoptionStatus(event)}>
                             <option value="adopted">Adopted</option>
-                            <option value="available">Available</option>
+                            <option value="saab">Available</option>
                         </select>
 
                         <label for="height">Height:</label>
@@ -160,7 +140,6 @@ const Admin = () => {
                     </div>
                 </form>
             </div>
-
         </div>
     )
 }
