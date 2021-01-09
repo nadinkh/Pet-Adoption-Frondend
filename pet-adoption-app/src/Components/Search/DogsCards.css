@@ -2,13 +2,13 @@
     display: flex;
     flex-wrap: wrap;
 }
-.card-one,.card-two,.card-three{
+.card-one{
     font-family: 'Ubuntu', sans-serif;
     padding: 2rem;
     background-color: #fff;
     border-radius: 10px;
     margin: 1.5rem;
-    /* max-width: 350px; */
+    max-width: 350px;
     box-shadow:
   0 2.8px 2.2px rgba(0, 0, 0, 0.034),
   0 6.7px 5.3px rgba(0, 0, 0, 0.048),
@@ -21,7 +21,7 @@ display: flex;
     flex-flow: column;
     justify-content: space-between;
   transition: 0.3s;
-  width: 30%;
+  
 }
 .detail-container{
     padding: 2rem;

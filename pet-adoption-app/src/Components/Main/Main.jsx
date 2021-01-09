@@ -31,9 +31,9 @@ const Main = () => {
                         <Route exact path="/homelogin">
                             <HomeLogin />
                         </Route>
-                        {/* <Route exact path="/admin">
+                        <Route exact path="/admin">
                             <Admin />
-                        </Route> */}
+                        </Route>
                         <Route exact path="/">
                             <Home />
                         </Route>
@@ -46,10 +46,10 @@ const Main = () => {
                         </Route>
                         <Route exact path="/search">
                             <Search />
-                            <DogsCards />
+                            {/* <DogsCards /> */}
 
                         </Route>
-                        <Route exact path="/readmore">
+                        <Route exact path="/readmore/:id">
                             <ReadMore />
                         </Route>
                         <Route exact path="/profilesettings">
@@ -88,10 +88,10 @@ const Main = () => {
                         </Route>
                         <Route exact path="/search">
                             <Search />
-                            <DogsCards />
+                            {/* <DogsCards /> */}
 
                         </Route>
-                        <Route exact path="/readmore">
+                        <Route exact path="/readmore/:id">
                             <ReadMore />
                         </Route>
                         <Route exact path="/profilesettings">

@@ -56,21 +56,7 @@ const Admin = () => {
         setBio(event.target.value)
         console.log('test8')
     }
-    // const handlePhotoURL = event => {
-    //     setPhotoURL(event.target.value)
-    //     console.log('test9')
-    // }
-    // const [imageSelected, setImageSelected] = useState('')
-    // const uploadImage = () => {
-    //     // console.log(files[0])
-    //     const formData = new FormData();
-    //     formData.append("file", imageSelected)
-    //     formData.append("upload_preset", "nvcpuwex")
-    //     axios.post("https://api.cloudinary.com/v1_1/drr6lmpsv/image/upload", formData)
-    //         .then((response) => {
-    //             console.log(response)
-    //         })
-    // }
+
     const uploadImg = (img) => {
         let photoURL = img.info.url;
         setPhotoURL(photoURL);
