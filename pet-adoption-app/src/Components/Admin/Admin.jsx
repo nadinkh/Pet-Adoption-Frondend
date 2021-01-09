@@ -107,7 +107,7 @@ const Admin = () => {
                         <select class="dog-status-input" name="status"
                             onChange={event => handleAdoptionStatus(event)}>
                             <option value="adopted">Adopted</option>
-                            <option value="saab">Available</option>
+                            <option value="available">Available</option>
                         </select>
 
                         <label for="height">Height:</label>

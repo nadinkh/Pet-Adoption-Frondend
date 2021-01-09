@@ -21,7 +21,7 @@ const AdvancedSearch = () => {
                     name="dog-search" placeholder="Filter by Name" />
                 <select className="status-filter" id="status" name="status">
                     <option value="adopted">Adopted</option>
-                    <option value="saab">Available</option>
+                    <option value="available">Available</option>
                 </select>
                 {/* <input className="status-filter" type="search"
                     name="dog-search" placeholder="Filter by Status" /> */}
