@@ -22,19 +22,19 @@ const Search = () => {
 
     return (
         <div className="search-container">
-            <div>
-                <input className="search-input" type="search"
-                    id="dog-search" name="dog-search" placeholder="Find your future dog" />
-                <div >
 
-                    <button className="find-btn">Find</button>
-                </div>
-                <div className="advanced-search-link">
+            <input className="search-input" type="search"
+                id="dog-search" name="dog-search" placeholder="Find your future dog" />
+            <div style={{ display: 'inline-block' }}>
 
-                    <Link to="/advancedsearch">Advanced Search</Link>
-                </div>
-
+                <button className="find-btn">Find</button>
             </div>
+            <div className="advanced-search-link" style={{ display: 'inline-block' }}>
+
+                <Link to="/advancedsearch">Advanced Search</Link>
+            </div>
+
+
             <div className="dog-list">
                 {petList && petList.length > 0 && petList.map((dog, index) => {
                     return <DogsCards key={index} dog={dog} />
